@@ -1,23 +1,12 @@
-<head>
-  <title>Blog</title>
-</head>
-
-<body>
-<header>
-	<form class="new-article">
-		<input type="text" name="title" placeholder="New title" class="button"/>
-		<input type="text" name="content" placeholder="New content" />
-		<input type ="submit" value= "add" class="button">
-	</form>
-</header>
-
+<template name="articles">
 <h1>Welcome to my world!</h1>
 
   {{#each articles}}
   {{> article}}
   {{/each}}
 
-</body>
+  {{> loginButtons}}
+</template>
 
 <template name="article">
   <h1>{{title}}</h1>

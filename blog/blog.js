@@ -1,31 +1,14 @@
-Articles = new Mongo.Collection("articles");
-
 if (Meteor.isClient){
   
-  Template.body.helpers({
+  Template.articles.helpers({
     articles: function(){
       return Articles.find({}, {sort: {createdAt: -1}});
     }
   });
-  
-  Template.body.events({
-  "submit .new-article": function(event){
-    console.log("test");
-    var title = event.target.title.value;
-    var content = event.target.content.value;
-    
-    Articles.insert({
-      title: title,
-      content: content,
-      createdAt: new Date()
-    });
-    event.target.title.value = "";
-    event.target.content.value = "";
-    return false;
-    },
 
+  Template.article.events({
     "click .delete": function(){
-      Articles.remove(this._id);
+     Meteor.call("rmArticle", this._id);
     }
   });
 }

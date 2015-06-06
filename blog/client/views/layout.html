@@ -1,0 +1,30 @@
+
+<template name="appLayout">
+<head>
+  <title>Blog</title>
+</head>
+
+<body>
+
+  <header>
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="/">Blog</a></h1>
+        </li>
+      </ul>
+      <section class="top-bar-section">
+        <ul class="left">
+          <li><a href="/article/create">Create Article</a></li>
+          <li><a href="/category/create">Create Category</a></li>
+          <li><a href="/tag/create">Create Tag</a></li>
+        </ul>
+      </section>
+    </nav>
+  </header>
+
+  <article>
+    {{> yield}}
+  </article>
+</body>
+</template>
