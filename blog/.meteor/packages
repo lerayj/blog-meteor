@@ -5,8 +5,8 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
 ewall:foundation
 iron:router
 accounts-ui
 accounts-password
+msavin:mongol

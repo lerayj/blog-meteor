@@ -13,3 +13,7 @@ Router.route('/article/create', function () {
 Router.route('/category/create', function(){
 	this.render('createCategory');
 });
+
+Router.route('/tag/create', function(){
+	this.render('createTag');
+});
