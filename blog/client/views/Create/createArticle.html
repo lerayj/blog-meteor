@@ -1,0 +1,20 @@
+<template name="createArticle">
+	<form class="new-article">
+		<input type="text" name="title" placeholder="New title"/>
+		<input type="text" name="content" placeholder="New content" />
+		<!-- list categ -->
+      <label>Category
+        <select id="categ-list" name="categ">
+          {{#each categories}}
+            <option value="{{name}}" data-id={{_id}}>{{name}}</option>
+          {{/each}}
+        </select>
+      </label>
+
+ {{#each tags}}
+        <button type="button" name="tag" class="button round" data-id={{_id}} value={{label}} data-type="tag" data-selected="false">{{label}}</button>
+      {{/each}}
+      <br>
+    <input type ="submit" value= "Create" class="button">
+	</form>
+</template>
