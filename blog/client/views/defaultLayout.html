@@ -1,11 +1,10 @@
 
-<template name="appLayout">
+<template name="defaultLayout">
 <head>
   <title>Blog</title>
 </head>
 
 <body>
-
   <header>
   <div class="fixed">
     <nav class="top-bar" data-topbar role="navigation">
@@ -13,9 +12,16 @@
         <li class="name">
           <h1><a href="/">Blog</a></h1>
         </li>
+         <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+
       </ul>
       <section class="top-bar-section">
         <ul class="left">
+          <li><a href="#">Techno Posts</a></li>
+          <li><a href="#">Perso Posts</a></li>
+          <li><a href="#">About me</a></li>
+        </ul>
+        <ul class="right">
           <li><a href="/article/create">Create Article</a></li>
           <li><a href="/category/create">Create Category</a></li>
           <li><a href="/tag/create">Create Tag</a></li>
@@ -23,11 +29,15 @@
       </section>
     </nav>
   </div>
-  <img src="/frontwall.jpg">
-  </header>
+  <img src="/blurLights.jpg" class="hide-for-small-only banniere">
+    </header>
 
-  <article>
+  <article class="main-home">
     {{> yield}}
   </article>
+
+
+
+
 </body>
 </template>

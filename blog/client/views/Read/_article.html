@@ -1,0 +1,22 @@
+<template name="_article">
+<div class="article-container small-12 columns">
+	<div class="article-header small-12 columns">	
+	  <a href=""><h1 class="left">Titre: {{title}}</h1></a>
+	  <button class="right delete">&times;</button>
+	</div>
+	<article class="overview small-12 columns">
+	
+	  <h2>Categorie: {{nameCateg}}</h2>
+	  <h2>{{createdAt}}</h2>
+	  <p>{{content}}</p>
+	  </article>
+	  <div class="article-footer small-12 columns">
+	  	<p>Tags:
+<!-- 	  	probleme de portée, il prend le tags général --> 
+		{{#each tags}}
+		<a href=""><span style="font-size:20px;" class="radius secondary label">{{label}}</span></a>
+		{{/each}}
+	  	</p>
+	  </div>
+  </div>
+</template>

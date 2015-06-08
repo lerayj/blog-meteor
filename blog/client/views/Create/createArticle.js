@@ -1,4 +1,5 @@
 if (Meteor.isClient){
+
   Template.createArticle.helpers({
     "categories": function(){
       return Categories.find({});
@@ -17,14 +18,18 @@ if (Meteor.isClient){
     var categId = select.options[select.selectedIndex].getAttribute('data-id');
 
     var selectedTags = event.target.querySelectorAll('[data-selected=true]');
-    var tagList = {};
+    var tagList = Array();
     for (var i = 0; i < selectedTags.length; i++){
       var item = selectedTags[i];
-      tagList[item.getAttribute('data-id')] = item.value;
+      var tag = {};
+      //tagList[item.getAttribute('data-id')] = item.value;
+      tag['id'] = item.getAttribute('data-id');
+      tag['label'] = item.value;
+      tagList.push(tag);
       item.className = "button round";
       item.setAttribute('data-selected','false'); 
     }
-    //console.log(tagList); 
+    console.log(tagList); 
     Meteor.call("addArticle", title, content, categId, categName, tagList);
     event.target.title.value = "";
     event.target.content.value = "";
@@ -45,4 +50,5 @@ if (Meteor.isClient){
     }
   });
 }
+
 

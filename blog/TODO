@@ -1,3 +1,12 @@
--Systeme de Tag
 -identification admin
-- Commentaire
+-Commentaire
+-page accueil
+-affichage par tag
+-affichage par categ
+-categories generic dans la topbar enlever les 2 categ en dur
+-aleger images
+-template vue article complet
+-template vue article raccourci	
+-markup edition article
+-responsive
+-publier en tant que moteur de blog/cv

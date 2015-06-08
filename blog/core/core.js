@@ -4,7 +4,6 @@ Categories = new Mongo.Collection("categories");
 
 Meteor.methods({
   addArticle: function(title, content, idCateg, nameCateg, tagList){
-    //alert('test');
     Articles.insert({
       title: title,
       content: content,
@@ -32,3 +31,23 @@ Meteor.methods({
     Categories.remove(id);
   }
 });
+
+if (Meteor.isClient){
+  Meteor.subscribe("categories");
+  Meteor.subscribe("tags");
+  Meteor.subscribe("articles");
+}
+
+if (Meteor.isServer){
+  Meteor.publish('categories', function(){
+      return Categories.find({});
+  });
+
+  Meteor.publish('tags', function(){
+    return Tags.find({});
+  });
+
+ Meteor.publish("articles", function(){
+    return Articles.find({}, {sort: {createdAt: -1}});
+  });
+}

@@ -19,6 +19,8 @@ ejson@1.0.6
 email@1.0.6
 ewall:foundation@5.5.2
 fastclick@1.0.3
+fourseven:scss@3.1.1
+francocatena:compass@0.5.1
 geojson-utils@1.0.3
 gwendall:session-json@0.1.7
 html-tools@1.0.4

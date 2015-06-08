@@ -1,11 +1,22 @@
 Router.configure({
-  layoutTemplate: 'AppLayout'
+  layoutTemplate: 'defaultLayout'
 });
 
+//public
 Router.route('/', function () {
+	this.layout('homeLayout');
 	this.render('Articles');
 });
 
+Router.route('/tech',function(){
+	this.render('readArticles');
+});
+
+Router.route('/perso',function(){
+	this.render('readArticles');
+});
+
+//admin
 Router.route('/article/create', function () {
 	this.render('createArticle');
 });

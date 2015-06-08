@@ -10,3 +10,5 @@ iron:router
 accounts-ui
 accounts-password
 msavin:mongol
+fourseven:scss
+francocatena:compass

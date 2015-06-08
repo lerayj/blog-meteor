@@ -1,0 +1,42 @@
+/*Structure*/
+
+/*End Structure*/
+
+/*Header*/
+.top-bar{
+	background-color: black;
+	 opacity: 0.8;
+}
+
+.top-bar-section li a:not(.button) {
+    background: black !important;   
+}
+
+.top-bar-section li a:not(.button):hover {
+    background: #333 !important;   
+}
+
+.top-bar-section ul li.active > a {
+    background: black !important;   
+}
+
+.top-bar-section ul li.active > a:hover {
+    background: #333 !important;   
+}
+
+.banniere{
+	height: 200px;
+	width: 100vw;
+	
+}
+
+
+/*End Header*/
+.main-home{
+height: 100vh;
+width: 100vw;
+}
+
+/*Content*/
+
+/*End Content*/
