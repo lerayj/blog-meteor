@@ -1,12 +1,11 @@
 -identification admin
--Commentaire
--page accueil
--affichage par tag
--affichage par categ
--categories generic dans la topbar enlever les 2 categ en dur
--aleger images
--template vue article complet
+-footer
+-main page design
+-articles list design
+-full article design
+-faire parti CV
 -template vue article raccourci	
--markup edition article
+-markdown edition article meteor add chuangbo:marked
 -responsive
+-faire un 404
 -publier en tant que moteur de blog/cv

@@ -1,20 +1,42 @@
 <template name="createArticle">
 	<form class="new-article">
-		<input type="text" name="title" placeholder="New title"/>
-		<input type="text" name="content" placeholder="New content" />
-		<!-- list categ -->
-      <label>Category
+    <div class="row">
+      <div class="large-6 columns">
+        <label>Title
+      <input type="text" name="title" placeholder="New title"/>
+        </label>
+      </div>
+
+      <div class="large-6 columns">
+        <label>Category
         <select id="categ-list" name="categ">
           {{#each categories}}
             <option value="{{name}}" data-id={{_id}}>{{name}}</option>
           {{/each}}
         </select>
-      </label>
-
- {{#each tags}}
-        <button type="button" name="tag" class="button round" data-id={{_id}} value={{label}} data-type="tag" data-selected="false">{{label}}</button>
-      {{/each}}
-      <br>
-    <input type ="submit" value= "Create" class="button">
+        </label>
+      </div>
+    </div>
+		
+    <div class="row">
+      <div class="large-12 columns">
+        <label>New content
+          <textarea name="content" rows=15 placeholder="Type your article here. Markup allowed"></textarea>
+        </label>
+      </div>
+    </div>
+	<!-- <input type="text" name="content" placeholder="New content" /> -->
+	<!-- list categ -->
+    <div class="row">
+      <div class="large-12 columns">
+        Tags
+        <br>
+       {{#each tags}}
+          <button type="button" name="tag" class="button round" data-id={{_id}} value={{label}} data-type="tag" data-selected="false">{{label}}</button>
+        {{/each}}
+        <br>
+        <input type ="submit" value= "Create" class="button">
+      </div>
+    </div>
 	</form>
 </template>

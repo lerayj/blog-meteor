@@ -17,9 +17,11 @@
       </ul>
       <section class="top-bar-section">
         <ul class="left">
-          <li><a href="#">Techno Posts</a></li>
-          <li><a href="#">Perso Posts</a></li>
-          <li><a href="#">About me</a></li>
+          {{#each categories}}
+            <li><a href="/{{name}}/articles">{{name}}</a></li>
+          {{/each}}
+          <li><a href="/aboutMe">About Me</a></li>
+          
         </ul>
         <ul class="right">
           <li><a href="/article/create">Create Article</a></li>

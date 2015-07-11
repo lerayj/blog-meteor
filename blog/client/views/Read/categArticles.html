@@ -1,0 +1,12 @@
+<template name="categArticles">
+	<div class="row">
+    	<div class="large-12 columns">
+			<h1>{{#if tagSort}}Tag {{tag}}{{/if}}
+				{{#if categSort}}Categorie {{categ}}{{/if}}</h1>
+			
+			{{#each articles}}
+				{{> _article}}
+			{{/each}}
+		</div>
+	</div>
+</template>

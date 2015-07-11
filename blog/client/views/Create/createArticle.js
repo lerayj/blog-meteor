@@ -22,7 +22,6 @@ if (Meteor.isClient){
     for (var i = 0; i < selectedTags.length; i++){
       var item = selectedTags[i];
       var tag = {};
-      //tagList[item.getAttribute('data-id')] = item.value;
       tag['id'] = item.getAttribute('data-id');
       tag['label'] = item.value;
       tagList.push(tag);
