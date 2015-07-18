@@ -1,0 +1,27 @@
+<template name="_article">
+	<div class="article-container row">
+		<div class="article-header small-12 columns">	
+			<a href="{{nameCateg}}/article/{{_id}}"><h2 class="left">{{title}}</h2></a>
+			{{#if currentUser}}
+			<a href="#" class="right delete">[x]</a>
+			{{/if}}
+			<div class="clearfix"></div>
+			<span>le {{createdAt}}</span>
+		</div>
+		
+		<article class="overview small-12 columns">
+			{{#markdown}}
+			{{content}}
+			{{/markdown}}
+		</article>
+
+		<div class="article-footer small-12 columns">
+			<span class="label">{{nameCateg}}</span>
+			<p>
+				{{#each tags}}
+				<a href="/{{../nameCateg}}/{{label}}/articles"><span style="font-size:20px;" class="radius secondary label">{{label}}</span></a>
+				{{/each}}
+			</p>
+		</div> 
+	</div>
+</template>

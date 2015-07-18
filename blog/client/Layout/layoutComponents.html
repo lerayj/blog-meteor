@@ -1,0 +1,41 @@
+<template name="navbar">
+  <header>
+    <div class="fixed">
+      <nav class="top-bar" data-topbar role="navigation">
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="/">Blog</a></h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+
+        </ul>
+        <section class="top-bar-section">
+          <ul class="left">
+            {{#each categories}}
+            <li><a href="/{{name}}/articles">{{name}}</a></li>
+            {{/each}}
+            <li><a href="/aboutMe">About Me</a></li>
+            
+          </ul>
+          {{#if currentUser}}
+          <ul class="right">
+            <li><a href="/article/create">Create Article</a></li>
+            <li><a href="/category/create">Create Category</a></li>
+            <li><a href="/tag/create">Create Tag</a></li>
+          </ul>
+          {{/if}}
+        </section>
+      </nav>
+    </div>
+  </header>
+</template>
+
+<template name="footer">
+ <footer>
+  <div class="row">
+    <div class="large-12  columns">
+      <p>Copyright 2015 Julien Leray</p>
+    </div>      
+  </div>
+</footer>
+</template>

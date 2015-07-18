@@ -1,0 +1,16 @@
+<template name="tagCreate">
+	<div class="row">
+	 	<div class="large-12 columns">
+			<form class="new-tag">
+				<input type="text" name="label" placeholder="New label"/>
+				<input type ="submit" value= "Add" class="button">
+			</form>
+
+			<ul>
+				{{#each tagsList}}
+				<li>{{label}}<button data-action="delete">&times;</button></li>
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+</template>

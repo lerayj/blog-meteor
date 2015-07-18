@@ -1,0 +1,22 @@
+<template name="categoryCreate">
+	 <div class="row">
+	 	<div class="large-12 columns">
+	<form class="new-category">
+		<input type="text" name="label" placeholder="New category"/>
+		<input type ="submit" value= "Add" class="button">
+	</form>
+
+	<ul class="categories">
+	{{#each categories}}
+	  {{> category}}
+  	{{/each}}
+  	</ul>
+  </div>
+  	</div>
+</template>
+
+
+
+<template name="category">
+	<li>{{name}}<button class="delete">&times;</button></li>
+</template>

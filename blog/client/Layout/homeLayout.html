@@ -1,0 +1,22 @@
+<template name="homeLayout">
+  <head>
+    <title>Blog</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      {{> navbar}}
+      <div class="img-container">
+        <img src="/frontwall.jpg" class="hide-for-small-only frontwallImg">
+        <button class="scrollBtn">Hey!</button>
+      </div>
+      <div class="content">
+        <article class="main-home">
+          {{> yield}}
+        </article>
+      </div>
+
+      {{> footer}}
+    </div>
+  </body>
+</template>

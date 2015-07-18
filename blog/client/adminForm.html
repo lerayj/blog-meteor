@@ -1,0 +1,23 @@
+<template name="register">
+	<h2>register admin</h2>
+	<form class="register">
+		<p>Email <input type="email" name="email"></p>
+		<p>pass <input type="password" name="pass"></p>
+		<p><input type="submit" value="Register"></p>
+	</form>
+	{{#if currentUser}}
+		<a href="#" data-type="logout">Logout</a>
+	{{/if}}
+
+	{{>login}}
+</template>
+
+<template name="login">
+	<h2>Log admin</h2>
+	<form class="login">
+		<p>Email <input type="email" name="emailLogin"></p>
+		<p>pass <input type="password" name="passLogin"></p>
+		<p><input type="submit" value="Login"></p>
+	</form>
+
+</template>
