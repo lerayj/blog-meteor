@@ -13,6 +13,18 @@ Meteor.methods({
       tags: tagList
     });  
   },
+  updateArticle: function(id, title, content, idCateg, nameCateg, tagList){
+    Articles.update({_id: id},{
+      $set: {
+        title: title,
+        content: content,
+        createdAt: new Date(),
+        idCateg: idCateg,
+        nameCateg: nameCateg,
+        tags: tagList
+      }
+    });  
+  },
   rmArticle: function(id){
     Articles.remove(id);
   },
@@ -35,7 +47,7 @@ Meteor.methods({
 if (Meteor.isClient){
   Meteor.subscribe("categories");
   Meteor.subscribe("tags");
-  Meteor.subscribe("articles");
+
 }
 
 if (Meteor.isServer){
@@ -50,4 +62,16 @@ if (Meteor.isServer){
  Meteor.publish("articles", function(){
     return Articles.find({}, {sort: {createdAt: -1}});
   });
+
+  Meteor.publish("oneArticle", function(id){
+    return Articles.find({_id: id});
+  });
+
+  Meteor.publish("categArticles", function(categName){
+      return Articles.find({nameCateg: categName});
+    }); 
+
+  Meteor.publish("tagArticles", function(tagName){
+      return Articles.find({"tags.label": tagName});
+    });   
 }

@@ -11,6 +11,7 @@ if (Meteor.isClient){
 
   Template.articleCreate.events({
   "submit .new-article": function(event){
+
     var title = event.target.title.value;
     var content = event.target.content.value;
     var categName = event.target.categ.value;
@@ -28,11 +29,14 @@ if (Meteor.isClient){
       item.className = "button round";
       item.setAttribute('data-selected','false'); 
     }
-    console.log(tagList); 
+    if(this.article){
+      Meteor.call("updateArticle",this.article._id, title, content, categId, categName, tagList);
+    }else{
     Meteor.call("addArticle", title, content, categId, categName, tagList);
     event.target.title.value = "";
     event.target.content.value = "";
     event.target.categ.value = "";
+    }
     return false;
     },
     "click [data-type=tag]": function(event){

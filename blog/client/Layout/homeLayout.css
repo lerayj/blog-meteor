@@ -1,14 +1,70 @@
+/*Fonts*/
+@font-face {
+    font-family: 'FontinBold';
+    src: url('fonts/fontin/Fontin-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'FontinItalic';
+    src: url('fonts/fontin/Fontin-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'FontinRegular';
+    src: url('fonts/fontin/Fontin-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'FontinSmallCaps';
+    src: url('fonts/fontin/Fontin-SmallCaps.ttf');
+}
+
+@font-face {
+    font-family: 'FontinSansBold';
+    src: url('fonts/fontinSans/Fontin_Sans_B_45b.otf');
+}
+
+@font-face {
+    font-family: 'FontinSansBoldItalic';
+    src: url('fonts/fontinSans/Fontin_Sans_BI_45b.otf');
+}
+
+@font-face {
+    font-family: 'FontinSansItalic';
+    src: url('fonts/fontinSans/Fontin_Sans_I_45b.otf');
+}
+
+@font-face {
+    font-family: 'FontinSansRegular';
+    src: url('fonts/fontinSans/Fontin_Sans_R_45b.otf');
+}
+
+@font-face {
+    font-family: 'FontinSansSmallCaps';
+    src: url('fonts/fontinSans/Fontin_Sans_SC_45b.otf');
+}
+/*End Fonts*/
+
 /*Structure*/
 html,
 body {
    margin:0;
    padding:0;
    height:100%;
+   font-family: 'FontinSansRegular';
 }
 
 .wrapper{
 	min-height:100%;
 	position:relative;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: 'FontinBold';
+}
+
+.label{
+    font-family: 'FontinSansRegular';
 }
 /*End Structure*/
 

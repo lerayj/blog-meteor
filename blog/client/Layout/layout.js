@@ -14,7 +14,6 @@ Template.navbar.helpers({
 Template.homeLayout.events({
 
     "click .scrollBtn" : function(event){
-    	console.log('OK');
 		$('html, body').animate({
 	    scrollTop: $(".content").offset().top
 		}, 1000);
